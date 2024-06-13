@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+        --snow: hsla(350, 33%, 96%, 1);
+        --french-gray: hsla(247, 11%, 83%, 1);
+        --bittersweet: hsla(7, 63%, 61%, 1);
+}
+
+body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background: url("images/bg-intro-mobile.png") var(--red); 
+    background-size: contain;
+    font-family: Poppins;
+    font-size: 1rem;
+    color: var(--grayish-blue);
+    padding-top: 4.25rem;
+    place-items: center;
+    place-content: center;
+   
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: column; 
+    align-items: center;   
+    max-width: 23.43rem;
+    border-radius: 0.3rem;
+}
+
+.description {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--snow);
+    margin: 0 2rem 4rem ;
+}
+
+h1.description-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 4rem;
+    margin-bottom: 0;
+}
+
+.description-service {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align:center;
+    line-height: 1.2;
+}
+
+.description-service p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 2rem;
+}
+
+section.form-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.free-option {
+    line-height: 1.7;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--snow);
+    border-radius: 0.3rem;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--blue);
+    box-shadow: 0 2px 10px var(--red);
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.free-option p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 2rem;
+    padding: inherit;
+    line-height: 1.7;
+}
+
+.free-option p span {
+    font-weight: 700;
+}
+
+form {
+    background-color: var(--snow); 
+    color: var(--snow);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight:700; 
+    padding:0.5rem 1rem; 
+    border-radius: 0.3rem;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  
+}
+
+input[type="text"],  input[type="email"], input[type="password"]{
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 0.3rem;
+    height: 2.34rem;
+}
+
+label, label#password {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+p.agree-terms {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+p.agree-terms span {
+    color: var(--red);
+}
+
+button.submit {
+    background-color: var(--green); 
+    border-color: var(--green);
+    box-shadow: 0 2px 5px var(--green);
+    font-family: Poppins;
+    font-size: 1rem;
+    font-weight:700; 
+    color: var(--snow);
+    padding:1rem 4rem; 
+    border-radius: 0.3rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+button:hover {
+    background-color: var(--green);
+    cursor: pointer; 
+    opacity: 0.7;
+    transition: .5s ease;
+}
+
+.agree-terms {
+    color: var(--french-gray);
+}
+
+span.agree-terms {
+    color: var(--red);
+}
+
+@media screen and (min-width: 90rem) {
+    body{
+        min-height: 100vh;
+        background: url("images/bg-intro-desktop.png") var(--red);
+        background-repeat: no-repeat; 
+    }
+
+   main {
+        margin: 0 auto;   
+          display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        max-width: 90rem;
+    }
+   
+    section.description, section.form-options{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 50%;
+    }
+
+    h1.description-title {
+        text-align: left;
+        font-size: 2rem;
+        margin: 0 7rem 0 0;
+        padding: 0 6rem;
+        font-weight: 700;
+    }
+
+    .description-service {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        min-height: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align:left;
+        line-height: 1.2;
+        margin: 0 4rem;
+    }
+
+    .free-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.7;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--snow);
+        border-radius: 0.3rem;
+        max-width: 100%;
+        background-color: var(--blue);
+        bottom: 1px 10px 0px -1px var(--red);
+        padding: 0 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .free-option p{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 400;
+        margin: 1rem;
+        line-height: 1.7;
+    }
+
+    .description-service p {
+        font-size: 1rem;
+        text-align: left;
+        font-weight: 400;
+        line-height: 1.7;
+        margin-top: 2rem;
+        padding: 0 2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        background-color: var(--snow); 
+        color: var(--snow);
+        font-family: Poppins;
+        font-size: 1rem;
+        font-weight:700; 
+        padding:1rem 2rem;
+        border-radius: 0.3rem;
+        max-width: 100%;
+        box-shadow: 1px 10px 0px -1px var(--red);
+    }
+
+    input[type="text"],  input[type="email"], input[type="password"]{
+        width: 95%;
+        padding: 1rem;
+        margin: 0.7rem;
+        border: 1px solid var(--grayish-blue);
+        border-radius: 0.3rem;
+        height: 3.3rem;
+    }
+    
+    button.submit {
+        background-color: var(--green); 
+        border-color: var(--green);
+        box-shadow: 0 2px 5px var(--green);
+        font-family: Poppins;
+        font-size: 1rem;
+        font-weight:700; 
+        color: var(--snow);
+        padding:1rem 4.5rem; 
+        border-radius: 0.3rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    p.agree-terms {
+        margin-top: 1rem;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+/*mob 375 1000
+desc 900 660
+active 1440 800*/
