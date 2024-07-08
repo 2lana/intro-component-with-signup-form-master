@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 :root {
     --red: hsl(0, 100%, 74%); 
     --green: hsl(154, 59%, 51%);
@@ -10,6 +9,7 @@
         --snow: hsla(350, 33%, 96%, 1);
         --french-gray: hsla(247, 11%, 83%, 1);
         --bittersweet: hsla(7, 63%, 61%, 1);
+        --padding-input: 5rem;
 }
 
 body {
@@ -28,9 +28,6 @@ body {
     font-size: 1rem;
     color: var(--grayish-blue);
     padding-top: 4.25rem;
-    place-items: center;
-    place-content: center;
-   
 }
 
 main {
@@ -126,8 +123,8 @@ form {
     width: 100%;
     max-width: 100%;
     display: block;
-  
 }
+
 
 input[type="text"],  input[type="email"], input[type="password"]{
     width: 90%;
@@ -137,7 +134,34 @@ input[type="text"],  input[type="email"], input[type="password"]{
     height: 2.34rem;
 }
 
-label, label#password {
+input[type="text"].error,  input[type="email"].error, input[type="password"].error { 
+    color: #ff0000;
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    display: inline-block;
+    font-weight: normal;
+    border: 2px solid var(--red);
+}
+
+input[type="text"].error::placeholder, input[type="password"].error::placeholder {
+     color: var(--snow);
+}
+
+input[type="email"].error::-webkit-input-placeholder {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+label#fname-error.error,  label#lname-error.error,  label#email-error.error,  label#password-error.error  {
+    color: var(--red);
+    text-align: right;
+    font-style: italic;
+    font-weight: 400;
+}
+
+label{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -162,6 +186,7 @@ button.submit {
     font-family: Poppins;
     font-size: 1rem;
     font-weight:700; 
+    letter-spacing: 0.1rem;
     color: var(--snow);
     padding:1rem 4rem; 
     border-radius: 0.3rem;
@@ -182,6 +207,11 @@ button:hover {
 
 span.agree-terms {
     color: var(--red);
+}
+
+#form-submit > p > a {
+    font-weight: 700;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 90rem) {
@@ -264,7 +294,6 @@ span.agree-terms {
     form {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
         background-color: var(--snow); 
@@ -281,12 +310,36 @@ span.agree-terms {
     input[type="text"],  input[type="email"], input[type="password"]{
         width: 95%;
         padding: 1rem;
-        margin: 0.7rem;
+        margin: 0.7rem 0;
         border: 1px solid var(--grayish-blue);
         border-radius: 0.3rem;
         height: 3.3rem;
     }
-    
+
+    input[type="text"].error,  input[type="email"].error, input[type="password"].error {
+        border: 2px solid var(--red);
+        background-image: url("images/icon-error.svg");
+        background-repeat: no-repeat; 
+        background-position: 95% center;
+    }
+
+    input[type="text"].error::placeholder, input[type="password"].error::placeholder {
+         color: var(--snow);
+    }
+
+    input[type="email"].error::-webkit-input-placeholder {
+        color: var(--red);
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    label#fname-error.error,  label#lname-error.error,  label#email-error.error,  label#password-error.error  {
+        color: var(--red);
+        text-align: right;
+        font-style: italic;
+        font-weight: 400;
+    }
+
     button.submit {
         background-color: var(--green); 
         border-color: var(--green);
