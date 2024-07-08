@@ -47,6 +47,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
+- Jquery
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
@@ -76,6 +77,7 @@ I want to continue focusing on in future projects. These could be concepts still
 ### Useful resources
 
 - [frontendmentor](https://www.frontendmentor.io/) - This resource gives me the opportunities to learn more about the use frontend and real practice code simple challenges for beginners. Respect!
+- [jqueryvalidation](https://jqueryvalidation.org/validate/) - This jQuery plugin makes simple clientside form validation easy.
 - [freecodecamp](https://www.freecodecamp.org/) - This recource helped me learn to code
 - [developer.mozilla](https://developer.mozilla.org) - This helped me as resourses for developers by developers.
 - [w3schools](https://www.w3schools.com/) - This is an amazing resource which helped me better understand html, css. I'd recommend it to anyone still learning technical concept.
