@@ -90,7 +90,7 @@ Most YouTube channels represent the author’s personal point of view. Only docu
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [here](https://jazzy-souffle-793e4c.netlify.app/)
 - Frontend Mentor - [@2lana](https://www.frontendmentor.io/profile/2lana)
 
 ## Acknowledgments
